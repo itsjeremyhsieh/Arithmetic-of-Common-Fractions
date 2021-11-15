@@ -46,7 +46,6 @@ public class Arithmetic
 			
 			if(flag == true)
 			{
-				//int result[][] = new int[1][2];
 				boolean flagg = false;
 				//str.split("\\+|-|\\*|/");
 				str = str.replace("+", " ");
@@ -63,14 +62,14 @@ public class Arithmetic
 	
 					if(str.charAt(i) == ' ')
 					{
-						if(flagg == false) //kid
+						if(flagg == false) //top
 						{
 							num[k][0] = numb;
 							flagg = true;
 							//System.out.println(numb);
 							numb = 0;
 						}
-						else//mother
+						else //bottom
 						{
 							num[k][1] = numb;
 							flagg = false;
@@ -90,7 +89,7 @@ public class Arithmetic
 				}
 				for(int i = 0 ; i < k ; i ++)
 				{
-					if(num[i][1] == 0)	//check mother
+					if(num[i][1] == 0)	//check bottom
 					{	
 						flag = false;
 						break;
@@ -109,7 +108,6 @@ public class Arithmetic
 				}
 				
 				//System.out.println("k=" + k);//HOW MANY OPERATORS
-				//int compute[][] = new int [2][2];
 				long top = 0, bottom = 0;
 					int i = 0;
 					for(i = 0 ; i < k ; i ++)
@@ -137,7 +135,6 @@ public class Arithmetic
 							//System.out.println(top + " " + bottom);
 							///////
 							//delete i+1
-							//boolean arrive = false;
 							for(int l = 0 ; l < k ; l ++)
 							{
 								if(l > i)
@@ -163,7 +160,7 @@ public class Arithmetic
 						}
 				}
 				/////
-				for(i = 0 ; i < k ; i ++)///////+-
+				for(i = 0 ; i < k ; i ++) //+-
 				{
 					if(oper1[i] == '+')
 					{
@@ -205,7 +202,7 @@ public class Arithmetic
 					{
 						System.out.println(num[l][0] +"/" + num[l][1]);
 					}*/
-					//System.out.println(oper1);
+					// System.out.println(oper1);
 					k--;
 					i = -1;
 					
